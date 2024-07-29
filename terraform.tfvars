@@ -1,4 +1,4 @@
-gcp_credentials_file = "/home/runner/gcp-key.json"
+gcp_credentials_file = "./gcp-key.json"
 
 vpc_network_name = "main"
 
