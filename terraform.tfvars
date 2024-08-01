@@ -42,7 +42,7 @@ kubernetes_service_account_id = "kubernetes"
 
 # Kubernetes 노드 풀 설정
 node_pool_name = "general"
-node_count = 5
+node_count = 1
 machine_type = "e2-small"
 oauth_scopes = ["https://www.googleapis.com/auth/cloud-platform"]
 
