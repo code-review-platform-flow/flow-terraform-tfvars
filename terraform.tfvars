@@ -1,5 +1,3 @@
-gcp_credentials_file = "./gcp-key.json"
-
 vpc_network_name = "main"
 
 # 서브네트워크 설정
@@ -16,11 +14,11 @@ storage_location = "ASIA-NORTHEAST3"
 
 # 서비스 계정 설정
 service_account_id = "flow-nextjs-dev"
-project_id = "code-review-platform-flow"
+project_id = "gcuflow"
 storage_admin_role = "roles/storage.admin"
 workload_identity_role = "roles/iam.workloadIdentityUser"
 artifact_registry_role = "roles/artifactregistry.reader"
-k8s_service_account_member = "serviceAccount:code-review-platform-flow.svc.id.goog[staging/flow-nextjs-dev]"
+k8s_service_account_member = "serviceAccount:gcuflow.svc.id.goog[staging/flow-nextjs-dev]"
 
 # Artifact Registry 저장소 설정
 repo_location = "asia-northeast3"
@@ -30,12 +28,8 @@ repo_dev_description = "Flow Dev Docker repository"
 repo_prd_description = "Flow Prd Docker repository"
 
 # Google Cloud Provider 설정
-gcp_project_id = "code-review-platform-flow"
+gcp_project_id = "gcuflow"
 gcp_region = "asia-northeast3"
-
-# Terraform GCS 백엔드 설정
-tf_state_bucket = "flow-tf-state-staging"
-tf_state_prefix = "terraform/state"
 
 # Kubernetes 클러스터 서비스 계정 설정
 kubernetes_service_account_id = "kubernetes"
@@ -58,13 +52,14 @@ cluster_name = "primary"
 cluster_location = "asia-northeast3-a"
 vpc_network = "google_compute_network.main.self_link"
 subnetwork = "google_compute_subnetwork.private.self_link"
-workload_pool = "code-review-platform-flow.svc.id.goog"
+workload_pool = "gcuflow.svc.id.goog"
 cluster_secondary_range_name = "k8s-pod-range"
 services_secondary_range_name = "k8s-service-range"
 master_ipv4_cidr_block = "172.16.0.0/28"
 
 # 방화벽 규칙 설정
-firewall_name = "allow-ssh"
+ssh_firewall_name = "allow-ssh"
+http_https_firewall_name = "allow-http-https"
 firewall_network = "google_compute_network.main.name"
 firewall_source_ranges = ["0.0.0.0/0"]
 
