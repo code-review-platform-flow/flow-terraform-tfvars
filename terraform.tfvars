@@ -8,8 +8,8 @@ k8s_pod_ip_cidr_range = "10.48.0.0/14"
 k8s_service_ip_cidr_range = "10.52.0.0/20"
 
 # Google Cloud Storage 버킷 설정
-storage_name_dev = "flow-static-assets-bucket-dev"
-storage_name_prd = "flow-static-assets-bucket-prd"
+storage_name_dev = "gcuflow-static-assets-bucket-dev"
+storage_name_prd = "gcuflow-static-assets-bucket-prd"
 storage_location = "ASIA-NORTHEAST3"
 
 # 서비스 계정 설정
