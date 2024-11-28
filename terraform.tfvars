@@ -60,6 +60,7 @@ master_ipv4_cidr_block = "172.16.0.0/28"
 # 방화벽 규칙 설정
 ssh_firewall_name = "allow-ssh"
 http_https_firewall_name = "allow-http-https"
+db_firewall_name = "allow-db"
 firewall_network = "google_compute_network.main.name"
 firewall_source_ranges = ["0.0.0.0/0"]
 
